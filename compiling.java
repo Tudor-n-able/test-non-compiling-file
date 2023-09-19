@@ -14,15 +14,14 @@ public class Test {
     private Long transactionId = 123L;
 
     void myFunc0() {
-        logger.info(String.format("Log message info: orderstatus={%s}, errorcode={%d}, user={%s}, transactionid={%d}", orderstatus, errorcode, user, transactionId));
+        logger.info(String.format("Log message info: orderstatus={%s}, user={%s}, transactionid={%d}", orderstatus, user, transactionId));
     }
 
     void myFunc1() {
         Logger localLogger = (Logger) LoggerFactory.getLogger(Slf4j.class);
-        localLogger.error(String.format("Log message error: orderstatus={%s}, errorcode={%d}, user={%s}, transactionid={%d}",
+        localLogger.error(String.format("Log message error: orderstatus={%s}, errorcode={%d}, transactionid={%d}",
                 orderstatus,
                 errorcode,
-                user,
                 transactionId
         ));
 
